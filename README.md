@@ -30,3 +30,13 @@ to-end deployment:
 * Package
 * Deploy
 * Smoke test
+
+
+### commands: 
+* docker:  
+build the image : `docker build -t vdc-app:v1 .`  
+verify the image is there : `docker images`  
+run the container locally : ` docker run -p 8081:8081 vdc-app:v1`  
+ 
+
+
