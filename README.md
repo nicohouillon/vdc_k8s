@@ -16,7 +16,7 @@ with a 200
 * Defines a kubernetes service using ClusterIP
 * Defines a kubernetes ingress to allow traffic on to the pods
 
-*(You may manually set up ingress on your laptop, but you must provide instructions th at
+*(You may manually set up ingress on your laptop, but you must provide instructions that
 get it working on a clean k8s cluster).*
 
 Create a script (either a standalone script or using Make, Rake, etc..) that automates building
@@ -31,12 +31,28 @@ to-end deployment:
 * Deploy
 * Smoke test
 
+### environemnt :
+_This deployment has been developed and tested on MacOsx_
+
+* Docker installed with K8s turned on + kubectl cli 
+* Helm and Tiller
+
 
 ### commands: 
+
+* create an app 
+
 * docker:  
 build the image : `docker build -t vdc-app:v1 .`  
 verify the image is there : `docker images`  
 run the container locally : ` docker run -p 8081:8081 vdc-app:v1`  
- 
 
+* helm:
 
+`helm create chart`
+`helm install --dry-run --debug ./chart/`
+`helm lint ./chart/`
+
+* kubernetes:
+
+    - Ingress:  
