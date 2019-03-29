@@ -49,10 +49,23 @@ run the container locally : ` docker run -p 8081:8081 vdc-app:v1`
 
 * helm:
 
+values.yaml contains the values to use (readiness,app name , ports ) 
+
 `helm create chart`
-`helm install --dry-run --debug ./chart/`
 `helm lint ./chart/`
+`helm install --dry-run --debug ./chart/`
+
 
 * kubernetes:
 
-    - Ingress:  
+    - Ingress: TBD 
+
+
+* Makefile :
+    - `make build-docker`
+    - `make chart-lint`
+    - `make chart-install`
+
+* tests : TBD 
+
+
